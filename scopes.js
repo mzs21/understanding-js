@@ -15,7 +15,7 @@ function myFunc() {
     */
 
     /* Ex 3
-    var x = 10 // As we wrote 'var', this 'x' inside this function scope or block scope
+    var x = 10 // As we wrote 'var', this 'x' inside this function scope scope
     console.log(`${x} from myFunc`) // 10
     */
 
