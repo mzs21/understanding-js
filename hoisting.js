@@ -50,13 +50,13 @@ console.log(a)
 // EX 5
 /*
 var LANGUAGE = 'Java'
-var lanugage = 'JavaScript'
+var language = 'JavaScript'
 
 function getLanguage() {
-    if (!lanugage) {
-        var lanugage = LANGUAGE
+    if (!language) {
+        var language = LANGUAGE
     }
-    return lanugage
+    return language
 }
 
 console.log(`I love ${getLanguage()}`); // I love Java
@@ -126,17 +126,18 @@ myFunc() // JS
 */
 
 // EX 11
-
+/*
 myFunc() // Referrence Error
 
 const myFunc = function () {
     let lang = 'JS' // First, lang = undefined, then lang = 'JS
     console.log(lang);
 }
+*/
 
 // Explanation
-/*
 
+/*
 const myFunc;
 myFunc()  // Here, myFunc doesn't have any value, as a result Ref error
 myFunc = undefined 
@@ -144,4 +145,4 @@ myfunc =  function () {
     let lang = 'JS' // First, lang = undefined, then lang = 'JS
     console.log(lang);
 }
-
+*/
