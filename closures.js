@@ -1,5 +1,5 @@
 /*
-Closure is a way to access the variable inside the private box. This happened because of a saved reference to the lexical environment. Children will always get access to parent but... parent does not have access to children. It is basically data stored that is carried with the internal function. By using closures, we can create variables that are stored in memory to be used in the future so it promotes memory efficient.
+Closure is a way to access the variable inside the private box. This happens because of a saved reference to the lexical environment. Children will always get access to parent but parent does not have access to children. It is basically stored data that is carried with the internal function. By using closures, we can create variables that are stored in memory to be used in the future so it promotes memory efficient.
 */
 
 // EX 1
@@ -66,7 +66,7 @@ let num1 = 5
 let num2 = 6
 
 var sum = function () {
-    return num1 + num2;
+    return num1 + num2;     // let and var are different, thus we see "Script" instead of "Closure". Also, num1 and num2 can be globally accessed.
 }
 
 console.dir(sum)
@@ -74,16 +74,16 @@ console.dir(sum)
 
 // EX 5
 /*
-    (function () {
-        let num1 = 5
-        let num2 = 6
+(function () {
+    let num1 = 5
+    let num2 = 6
 
-        var sum = function () {
-            return num1 + num2;
-        }
+    var sum = function () {
+        return num1 + num2;
+    }
 
-        console.dir(sum)    // In this case you'll see 'Closure'. Because, they are enclosed in a block now.
-    })()
+    console.dir(sum)    // In this case you'll see 'Closure'. Because, they are enclosed in a block now.
+})()
 */
 
 
@@ -104,7 +104,7 @@ var timer = stopWatch()
 
 
 for (let i = 0; i < 10000000; i++) {
-    var a = Math.random() * 1000000;
+    var a = Math.random() * 10000000000;
 }
 
 
