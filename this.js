@@ -115,6 +115,7 @@ let x = {
 
 printName.call(x)
 */
+
 // The call method will take an object and give output based on the provided object. Here 'this.name' is referring to 'name' in 'x' object.
 
 
