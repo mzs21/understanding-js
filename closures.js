@@ -112,7 +112,11 @@ timer() // Even after the delay (for loop), the timer() has kept track of its va
 
 console.dir(timer)
 
+// Performance optimization
 
+// timer = null // After this line, JS will throwaway timer as garbage and the following console.log will not run. 
+
+// console.log(timer)
 
 
 // EX 7
