@@ -477,3 +477,140 @@ scope chain
     |                           |
     |___________________________|
 */
+
+
+// Lexical Scope
+
+// Ex - 3
+
+function hello() {
+    var msg = 'Hello World'
+}
+
+hello()
+console.log(msg)
+
+// Firstly,
+
+/*
+
+Global Execution Context
+
+Phase: Loading/Creation
+
+window: global object
+
+this: window
+
+hello: fn()
+
+scope chain
+*/
+
+// Call Stack-
+
+/*
+
+    |                           |
+    |                           |
+    | Global Execution Context  |
+    |___________________________|
+*/
+
+
+// Then,
+
+/*
+
+Global Execution Context
+
+Phase: Execution
+
+window: global object
+
+this: window
+
+hello: fn()
+
+scope chain
+*/
+
+
+// Then, it'll see the hello function call
+
+hello()
+
+// hello() Execution Context will be created now
+
+/*
+
+hello() Execution Context
+
+Phase: Loading/Creation
+
+arguments: {}
+
+this: window
+
+msg: undefined
+
+scope chain
+*/
+
+// Call Stack-
+
+/*
+
+    |                           |
+    | hello() Execution Context |
+    | Global Execution Context  |
+    |___________________________|
+*/
+
+/*
+
+hello() Execution Context
+
+Phase: Execution
+
+arguments: {}
+
+this: window
+
+msg: 'Hello World'
+
+scope chain
+*/
+
+// After hello() is done executing, both hello() and Global execution contexts will pop out in order.
+
+// hello() Execution Context pops out
+
+/*
+
+    |                           |
+    |                           |
+    | Global Execution Context  |
+    |___________________________|
+*/
+
+// Global Execution Context pops out
+
+
+/*
+    
+    |                           |
+    |                           |
+    |                           |
+    |___________________________|
+*/
+
+// Now, when the compiler will go to the following line -
+
+console.log(msg) // Reference Error
+
+// Because 'msg' cannot be found in any context
+
+
+
+
