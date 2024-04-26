@@ -131,6 +131,8 @@ function async() {
 
 async()
 
+// The above function will still refer to both Closure and Global
+
 
 // EX 8
 
@@ -145,6 +147,8 @@ function async() {
 }
 
 async()
+
+// The above function will still refer to both Closure and Global
 
 
 // EX 9
@@ -175,6 +179,24 @@ for (let i = 0; i < 3; i++) {
 
 console.log('After for loop')
 
+/*
+The above output will be:
+
+- 0 
+- myFunc {inside the closure i = 0}
+- 1 
+- myFunc {inside the closure i = 1}
+- 2
+- myFunc {inside the closure i = 2}
+- After for loop
+- 0
+- 1
+- 2
+
+*/
+
+// As 'let' is block scope, it's using closure to make new instance of it.
+
 
 
 // EX 11
@@ -190,3 +212,20 @@ for (var i = 0; i < 3; i++) {
 }
 
 console.log('After for loop')
+
+
+/*
+The above output will be:
+
+- 0
+- myFunc {inside the global i = 3}
+- 1
+- myFunc {inside the global i = 3}
+- 2
+- myFunc {inside the global i = 3}
+- After for loop
+- 3 {3 times}
+
+*/
+
+// As 'var' function scope, it's being updated globally 
