@@ -56,6 +56,6 @@ function a() {
     console.log(a); // This will work
 }
 
-// console.log(a); // This won't, because of function scope
+console.log(a); // This won't, because of function scope. Note: We are trying to output the variable 'a', not function 'a()'
 
 a()
