@@ -20,7 +20,7 @@ scope chain
 
 */
 
-// Let's say, we have the following code now.
+// Let's say, we have the following code now. {EX-1}
 
 
 var topic = 'JS Execution Context'
