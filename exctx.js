@@ -613,4 +613,278 @@ console.log(msg) // Reference Error
 
 
 
+// Closure
 
+
+// Ex - 4
+
+var sum = 0;
+
+function doSum(a) {
+    return function (b) {
+        return a + b
+    }
+}
+
+var temp = doSum(2)
+
+sum = sum + temp(8)
+
+
+// Firstly,
+
+/*
+
+Global Execution Context
+
+Phase: Loading/Creation
+
+window: global object
+
+this: window
+
+sum: undefined
+
+temp: undefined
+
+doSum: fn()
+
+scope chain
+*/
+
+// Call Stack-
+
+/*
+
+    |                           |
+    |                           |
+    | Global Execution Context  |
+    |___________________________|
+*/
+
+
+// Then,
+
+/*
+
+Global Execution Context
+
+Phase: Execution
+
+window: global object
+
+this: window
+
+sum: 0
+
+temp: doSum(2)
+
+doSum: fn()
+
+scope chain
+*/
+
+// It'll see the doSum(2) call asigned to temp variable. So a new function execution context will be created.
+
+function doSum(a) {
+    return function (b) {
+        return a + b
+    }
+}
+
+var temp = doSum(2)
+
+/*
+
+doSum() Execution Context
+
+Phase: Loading/Creation
+
+arguments: {0:2}
+
+this: window
+
+a: 2
+
+anonymous: fn()
+
+scope chain
+*/
+
+// Call Stack-
+
+/*
+
+    |                           |
+    | doSum() Execution Context |
+    | Global Execution Context  |
+    |___________________________|
+*/
+
+/*
+
+doSum() Execution Context
+
+Phase: Execution
+
+arguments: {0:2}
+
+this: window
+
+a: 2
+
+anonymous: fn()
+
+scope chain
+*/
+
+// As doSum is returning an anonymous function, it'll pop out, but it'll keep a reference to the function by creating a Closure Scope.
+
+// function doSum(a) {
+return function (b) {
+    return a + b
+}
+// }
+
+/*
+
+Closure Scope
+
+Phase: Execution
+
+arguments: {0:2}
+
+this: window
+
+a: 2
+
+anonymous: fn()
+
+scope chain
+*/
+
+// Because of 'a' variable which is returned but not in the anonymous function, closure scope has been created
+
+// Call Stack-
+
+/*
+    |                Closure Scope              |
+    | doSum() Execution Context [Closure Scope] |
+    |             Global Execution Context      |
+    |___________________________________________|
+*/
+
+// Now, compiler go to the next line - 
+
+sum = sum + temp(8)
+
+// A new context for temp() will be created
+
+/*
+
+temp() Execution Context
+
+Phase: Loading/Creation
+
+arguments: {0:8}
+
+this: window
+
+b: 8
+
+scope chain
+*/
+
+// Call Stack-
+
+/*
+    |           temp() Execution Context        |
+    | doSum() Execution Context [Closure Scope] | 
+    |           Global Execution Context        |
+    |___________________________________________|
+*/
+
+/*
+
+temp() Execution Context
+
+Phase: Execution
+
+arguments: {0:8}
+
+this: window
+
+b: 8
+
+scope chain
+*/
+
+// Now, it'll see,
+
+return a + b;
+
+// As both the value of 'a' and 'b' exists, it'll return 
+
+return a + b;   // 10
+
+// and the value of 'sum' will change in Global Execution Context
+
+
+/*
+
+Global Execution Context
+
+Phase: Execution
+
+window: global object
+
+this: window
+
+sum: 10
+
+temp: doSum(2)
+
+doSum: fn()
+
+scope chain
+*/
+
+
+// Then pop out the temp() Execution Context
+
+// temp() Execution Context pops out -
+
+// Call Stack -
+
+/*
+    | doSum() Execution Context [Closure Scope] | 
+    |           Global Execution Context        |
+    |___________________________________________|
+*/
+
+
+// Then closure scope pops out.
+
+// Closure Scope pops out -
+
+// Call Stack -
+
+/*
+    |                           |
+    |                           |
+    | Global Execution Context  |
+    |___________________________|
+*/
+
+// Then Global Execution Context pops out.
+
+// Global Execution Context pops out -
+
+// Call Stack -
+
+/*
+    |                           |
+    |                           |
+    |                           |
+    |___________________________|
+*/
