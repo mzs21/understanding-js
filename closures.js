@@ -108,9 +108,11 @@ for (let i = 0; i < 10000000; i++) {
 }
 
 
-timer()
+timer() // Even after the delay (for loop), the timer() has kept track of its value by referencing. It doesn't matter how many lines/steps/executions were before timer(), JS will keep track of it. 
 
 console.dir(timer)
+
+
 
 
 // EX 7
