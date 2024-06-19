@@ -1,3 +1,5 @@
+// EX 1
+
 /*
 function Person() { }
 
@@ -6,6 +8,8 @@ Object.prototype.snigdho = () => console.log('I am Snigdho');
 // Prototype chain, Master Object
 // "Object" is the master object. We can add our own custom property to the Object via prototype and use it.
 
+// EX 2
+
 let me = {
 }
 
@@ -13,6 +17,7 @@ me.snigdho()
 */
 
 
+// EX 3
 
 /*
 function Person(name, age) { // Acting like Parent class
@@ -55,6 +60,9 @@ X.play()
 
 
 // Function to Class conversion
+
+// EX 4
+
 /*
 class Person { // Parent class
     constructor(name, age) {
@@ -82,10 +90,16 @@ class Cricketer extends Person { // Sub class
 let X = new Cricketer('X', 45, 'All', 'BD')
 
 X.play()
+
+
+// 'super' is a special keyword used in JavaScript classes to call functions on an object's parent class. It is commonly used when you are dealing with class inheritance, allowing a subclass to access and call functions on its parent class.
 */
 
 
 // Getter - Setter - Static
+
+// EX 5
+
 /*
 class Person {
     constructor(name, age) {
@@ -141,6 +155,8 @@ console.log(Person.returnName()); // Output will be 'Person'. Static is independ
 
 // Polymorphism
 
+// EX 6
+/*
 class Person { // Parent class
     constructor(name, age) {
         this.name = name;
@@ -164,9 +180,45 @@ class Cricketer extends Person { // Sub class
         this.country = country;
     }
     play() { // The process of overwriting the parent's class properties is called polymorphism 
-        super.play() // By calling 'super', we can have access to both the parent and child classes' functions
         console.log(`${this.name} is playing something`);
     }
+}
+
+let X = new Cricketer('X', 45, 'All', 'BD')
+
+X.play()
+*/
+
+// EX 7
+
+class Person { // Parent class
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    eat() {
+        console.log(`${this.name} is eating`);
+    }
+
+    play() {
+        console.log(`${this.name} is playing`);
+    }
+}
+
+class Cricketer extends Person { // Sub class
+    constructor(name, age, type, country) {
+        super(name, age);
+        this.name = name;
+        this.age = age;
+        this.type = type;
+        this.country = country;
+    }
+    play() { // The process of overwriting the parent's class properties is called polymorphism 
+        super.play() // By calling 'super', we can have access to both the parent and child classes' functions.
+        console.log(`${this.name} is playing something`);
+    }
+
+    // Since we called 'super' inside the above play(), both the parent and child play method will be shown on the output.
 }
 
 let X = new Cricketer('X', 45, 'All', 'BD')
