@@ -62,6 +62,28 @@ function getLanguage() {
 console.log(`I love ${getLanguage()}`); // I love Java
 
 // This behaviour is unexpected and causing because of 'var', it's function scope
+
+
+// What happens is that - 
+
+function getLanguage() {
+    if (!language) {
+        var language = LANGUAGE
+    }
+    return language
+}
+
+becomes,
+
+function getLanguage() {
+    var language 
+    if (!language) {
+        language = LANGUAGE
+    }
+    return language
+}
+
+Here 'language' is undefined so, the 'if' block becomes TRUE, and for that, value of LANGUAGE is assigned to the language. Ignoring the global 'language' variable that was declared on top. 
 */
 
 
