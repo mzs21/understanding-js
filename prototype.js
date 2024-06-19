@@ -91,6 +91,25 @@ function Person(name, age) {
     return person
 }
 
+Person.prototype = {
+    eat() {
+        console.log('Person is eating')
+    },
+    sleep() {
+        console.log('Person is sleeping')
+    },
+    play() {
+        console.log('Person is playing');
+    }
+}
+
+const X = Person('X', 13)
+
+const Y = Person('Y', 15)
+
+
+// Using the 'new' keyword the example will become like this.
+
 function PersonWithNew(name, age) {
     // let person = Object.create(PersonWithNew.prototype)
     // becomes 
@@ -109,27 +128,12 @@ function PersonWithNew(name, age) {
     // return this
 }
 
-
-Person.prototype = {
-    eat() {
-        console.log('Person is eating')
-    },
-    sleep() {
-        console.log('Person is sleeping')
-    },
-    play() {
-        console.log('Person is playing');
-    }
-}
-
-const X = Person('X', 13)
-
-const Y = Person('Y', 15)
-
-
 const X = new PersonWithNew('X', 13)
 
 const Y = new PersonWithNew('Y', 15)
+
+
+// Using 'new' a new instance of an object is created.
 */
 
 
@@ -189,6 +193,9 @@ const X = new Person('X', 13)
 const Y = new Person('Y', 15)
 
 Y.eat()
+
+
+// A constructor in JavaScript is a special function used to create and initialize objects. It’s typically used within a class to set up the initial state of an object when it is created.
 */
 
 
