@@ -200,17 +200,18 @@ a = 30
 
 function apiFunction(url) {
     fetch(url)
-        //.then(response => console.log(response)) // This will not be in closure
-        .then(response => console.log(url)) // But this will be in closure
+        //.then(console.dir(response => console.log(response))) // This will not be in closure
+        .then(console.dir(response => console.log(url))) // But this will be in closure
 }
 
 
 apiFunction("https://jsonplaceholder.typicode.com/todos/1")
 
-console.log(apiFunction())
+// While checking which one will be in closure, check either one after commenting the other one.
 
 
-// EX 10
+
+// EX 12
 
 for (let i = 0; i < 3; i++) {
     const myFunc = () => {
@@ -244,7 +245,7 @@ The above output will be:
 
 
 
-// EX 11
+// EX 13
 
 for (var i = 0; i < 3; i++) {
     const myFunc = () => {
