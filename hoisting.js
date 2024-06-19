@@ -118,7 +118,7 @@ myFunc() // JS
 // EX 10
 /*
 function myFunc() {
-    let lang = 'JS' // First, lang = undefined, then lang = 'JS
+    let lang = 'JS' // First, lang = undefined, then lang = 'JS'
     console.log(lang);
 }
 
@@ -130,7 +130,7 @@ myFunc() // JS
 myFunc() // Referrence Error
 
 const myFunc = function () {
-    let lang = 'JS' // First, lang = undefined, then lang = 'JS
+    let lang = 'JS' // First, lang = undefined, then lang = 'JS'
     console.log(lang);
 }
 */
