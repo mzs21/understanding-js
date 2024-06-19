@@ -131,7 +131,9 @@ function async() {
 
 async()
 
-// The above function will still refer to both Closure and Global
+console.dir(async)
+
+// The above function will only refer to Global because we are printing 'async()' only. Not any private value of it.
 
 
 // EX 8
@@ -148,10 +150,53 @@ function async() {
 
 async()
 
-// The above function will still refer to both Closure and Global
+// The above function will still refer to both Closure and Global. We are printing 'myFunc' here. It access the private variable 'a' which is inside 'async' function.
+
 
 
 // EX 9
+
+var a;
+
+function async() {
+    a = 20;
+    function myFunc() {
+        console.log(a)
+    }
+    setTimeout(myFunc, 3000);
+
+    console.dir(myFunc)
+}
+
+async()
+
+// The above function will only refer to Global.
+
+
+
+// EX 10
+
+var a;
+
+function async() {
+    a = 20;
+    function myFunc() {
+        console.log(a)
+    }
+    setTimeout(myFunc, 3000);
+
+    console.dir(myFunc)
+}
+
+async()
+
+a = 30
+
+// The above function will only refer to Global. The value of 'a' will be 30. Because, JS is referring to the value of 'a'. There's a 3 seconds delay and it is asynchronous, becuase of that, the value is referred even after the delay.
+
+
+
+// EX 11
 
 function apiFunction(url) {
     fetch(url)
