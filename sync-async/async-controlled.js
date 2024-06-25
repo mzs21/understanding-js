@@ -21,3 +21,4 @@ const completeOrder = (customer) => {
 
 takeOrder('Customer 1', (customer) => processOrder(customer, (customer) => completeOrder(customer)))
 
+// But if you look at the 'takeOrder() function call, you will see there are callbacks inside each function. If there are more, then it is called 'Callback hell' and it is better to avoid it.
