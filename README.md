@@ -16,6 +16,8 @@
 
 - [Execution Context](https://github.com/mzs21/understanding-js/blob/main/exctx.js)
 
+- [Higher Order Function](https://github.com/mzs21/understanding-js/blob/main/hof.js)
+
 - [Synchronous-Asynchronous](https://github.com/mzs21/understanding-js/tree/main/sync-async)
 
   - [Synchronous](https://github.com/mzs21/understanding-js/blob/main/sync-async/sync.js)
