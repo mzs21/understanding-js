@@ -15,3 +15,15 @@
 - [This](https://github.com/mzs21/understanding-js/blob/main/this.js)
 
 - [Execution Context](https://github.com/mzs21/understanding-js/blob/main/exctx.js)
+
+- [Synchronous-Asynchronous](https://github.com/mzs21/understanding-js/tree/main/sync-async)
+
+  - [Synchronous](https://github.com/mzs21/understanding-js/blob/main/sync-async/sync.js)
+
+  - [Asynchronous](https://github.com/mzs21/understanding-js/blob/main/sync-async/async.js)
+
+  - [Asynchronous-Controlled](https://github.com/mzs21/understanding-js/blob/main/sync-async/async-controlled.js)
+
+  - [Promise](https://github.com/mzs21/understanding-js/blob/main/sync-async/promise.js)
+
+  - [Async-Await](https://github.com/mzs21/understanding-js/blob/main/sync-async/async-await.js)
