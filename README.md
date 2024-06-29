@@ -29,3 +29,5 @@
   - [Promise](https://github.com/mzs21/understanding-js/blob/main/sync-async/promise.js)
 
   - [Async-Await](https://github.com/mzs21/understanding-js/blob/main/sync-async/async-await.js)
+
+- [Recursion](https://github.com/mzs21/understanding-js/blob/main/sync-async/recurs.js)
