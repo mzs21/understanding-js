@@ -33,3 +33,5 @@
 - [Recursion](https://github.com/mzs21/understanding-js/blob/main/sync-async/recurs.js)
 
 - [Event Loop](https://github.com/mzs21/understanding-js/blob/main/sync-async/et.js)
+
+- [Data Types](https://github.com/mzs21/understanding-js/blob/main/sync-async/types.js)
