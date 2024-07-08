@@ -35,3 +35,9 @@
 - [Event Loop](https://github.com/mzs21/understanding-js/blob/main/sync-async/et.js)
 
 - [Data Types](https://github.com/mzs21/understanding-js/blob/main/sync-async/types.js)
+
+- [XHR](https://github.com/mzs21/understanding-js/tree/main/xhr)
+
+  - [XHR (HTML)](https://github.com/mzs21/understanding-js/blob/main/xhr/xhr-code.html)
+
+  - [XHR (JS)](https://github.com/mzs21/understanding-js/blob/main/xhr/xhr-code.js)
