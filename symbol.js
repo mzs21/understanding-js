@@ -40,7 +40,7 @@ console.log(symbol1); // Error
 // * MARK: EX 4
 
 /*
-let symbol1 = Symbol.for('Symbol 1') 
+let symbol1 = Symbol.for('Symbol 1')
 let symbol2 = Symbol.for('Symbol 1')
 
 // The value inside the (), will now act as 'key'
@@ -94,7 +94,7 @@ for (const symbol of symbols) {
 */
 
 // * MARK: EX 7
-
+/*
 let arr = [1, 2, 3]
 
 console.log(arr.includes(2));
@@ -110,3 +110,75 @@ Array.prototype[includes] = () => console.log('My own Include Method');
 arr[includes](2)
 
 // Since, Symbol is an unique identifier, we can make a lot of versions of 'includes' without affecting the original 'includes' method of Array.
+*/
+
+// * MARK: EX 8
+/*
+let title = 'JavaScript'
+
+// Steps:
+
+// 1. Converts the title variable to new String()
+// 2. Convert the parameter to the RegExp
+// 3. JS will check whether there is implementation Symbol.search() in RegExp or not. If yes, code will be executed.
+
+console.log(title.search('Script'));
+
+console.log(title.search(/Script/));
+*/
+
+// * MARK: EX 9
+
+// Now, we will make our own search implementation using Symbol
+/*
+class Product {
+    constructor(title) {
+        this.title = title
+    }
+
+    [Symbol.search](string) {
+        return string.indexOf(this.title) >= 0 ? 'Found' : 'Not Found'
+    }
+}
+
+let laptop = new Product('Laptop')
+
+console.log('HP Laptop'.search(laptop)); // Found
+
+// The above 'search()' will only work for our 'laptop'
+
+console.log('JavaScript'.search('Script')); // 4
+
+// We can see the that the built in search method is still the same
+*/
+
+// * MARK: EX 10
+
+const myFunc = (obj) => {
+    const PVT = Symbol('My value')
+
+    return {
+        modify(obj) {
+            obj[PVT] = true
+        },
+        output(obj) {
+            return obj[PVT]
+        }
+    }
+}
+
+const value = myFunc()
+
+let object = { a: 1, b: 2 }
+
+value.modify(object)
+
+console.log(value.output(object));
+
+console.log(object);
+
+// Symbol is an unique identifier. It can't be deleted.
+
+delete object['[Symbol(My value)]']
+
+console.log(object);
