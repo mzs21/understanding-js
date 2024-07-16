@@ -43,3 +43,5 @@
   - [XHR (JS)](https://github.com/mzs21/understanding-js/blob/main/xhr/xhr-code.js)
 
 - [Symbol](https://github.com/mzs21/understanding-js/blob/main/sync-async/symbol.js)
+
+- [Iterator](https://github.com/mzs21/understanding-js/blob/main/sync-async/iterator.js)
