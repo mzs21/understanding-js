@@ -176,7 +176,7 @@ console.log(iterator.next());
 */
 
 // * MARK: EX 6
-
+/*
 function* generator(a, b) {
     let k = yield a + b
     let m = yield k + a + b
@@ -198,3 +198,121 @@ console.log(gen.next(50)); // { value: 80, done: false }
 console.log(gen.next(100)); // { value: 180, done: false }
 
 // Same thing will happen to variable 'm'.
+*/
+
+// * MARK: EX 7
+
+// Async - Await & Generator
+
+/*
+const takeOrder = (customer) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log(`Order taken from ${customer}`);
+        }, 2000);
+    })
+
+}
+
+const processOrder = (customer, callback) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log(`Order processed for ${customer}`)
+        }, 2000);
+    })
+
+}
+
+const completeOrder = (customer) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log(`Order completed for ${customer}`);
+        }, 2000);
+    })
+
+}
+
+function* solution(customer) {
+    yield takeOrder(customer)
+    yield processOrder(customer)
+    yield completeOrder(customer)
+}
+
+let gen = solution('XYZ')
+
+// gen.next()  // Run this command in browser console 
+*/
+
+
+// * MARK: EX 8
+
+// Async Generator uses [Symbol.asyncIterator]()
+
+/*
+const takeOrder = (customer) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(`Order taken from ${customer}`);
+        }, 2000);
+    })
+
+}
+
+const processOrder = (customer, callback) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(`Order processed for ${customer}`)
+        }, 2000);
+    })
+
+}
+
+const completeOrder = (customer) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(`Order completed for ${customer}`);
+        }, 2000);
+    })
+
+}
+
+async function* solution(customer) {
+    yield await takeOrder(customer)
+    yield await processOrder(customer)
+    yield await completeOrder(customer)
+}
+
+let gen = solution('XYZ')
+
+// gen.next().then(({ value }) => console.log(value))
+// gen.next().then(({ value }) => console.log(value))
+// gen.next().then(({ value }) => console.log(value))
+
+
+const promises = [gen.next(), gen.next(), gen.next()];
+
+(async function () {
+    for await (let p of promises) {
+        console.log(p);
+    }
+})()
+*/
+
+
+// * MARK: EX 9
+
+// Async iterator
+
+const asyncIterable = {
+    async *[Symbol.asyncIterator]() {
+        yield "hello";
+        yield 'async';
+        yield 'iterator';
+    }
+};
+
+(async () => {
+    for await (let x of asyncIterable) {
+        console.log(x);
+    }
+})()
