@@ -44,7 +44,7 @@
 
 - [Symbol](https://github.com/mzs21/understanding-js/blob/main/symbol.js)
 
-- [Iterator](https://github.com/mzs21/understanding-js/blob/main/iterator.js)
+- [Iterator](https://github.com/mzs21/understanding-js/blob/main/iterators.js)
 
 - [Generator](https://github.com/mzs21/understanding-js/blob/main/generator.js)
 
