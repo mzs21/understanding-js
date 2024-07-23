@@ -52,6 +52,6 @@
 
 - [Debounce](https://github.com/mzs21/understanding-js/tree/main/debounce)
 
-  - [Debounce (HTML)](https://github.com/mzs21/understanding-js/blob/main/xhr/debounce.html)
+  - [Debounce (HTML)](https://github.com/mzs21/understanding-js/blob/main/debounce/debounce.html)
 
-  - [Debounce (JS)](https://github.com/mzs21/understanding-js/blob/main/xhr/debounce.js)
+  - [Debounce (JS)](https://github.com/mzs21/understanding-js/blob/main/debounce/debounce.js)
