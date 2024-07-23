@@ -30,11 +30,11 @@
 
   - [Async-Await](https://github.com/mzs21/understanding-js/blob/main/sync-async/async-await.js)
 
-- [Recursion](https://github.com/mzs21/understanding-js/blob/main/sync-async/recurs.js)
+- [Recursion](https://github.com/mzs21/understanding-js/blob/main/recurs.js)
 
-- [Event Loop](https://github.com/mzs21/understanding-js/blob/main/sync-async/et.js)
+- [Event Loop](https://github.com/mzs21/understanding-js/blob/main/et.js)
 
-- [Data Types](https://github.com/mzs21/understanding-js/blob/main/sync-async/types.js)
+- [Data Types](https://github.com/mzs21/understanding-js/blob/main/types.js)
 
 - [XHR](https://github.com/mzs21/understanding-js/tree/main/xhr)
 
@@ -42,13 +42,13 @@
 
   - [XHR (JS)](https://github.com/mzs21/understanding-js/blob/main/xhr/xhr-code.js)
 
-- [Symbol](https://github.com/mzs21/understanding-js/blob/main/sync-async/symbol.js)
+- [Symbol](https://github.com/mzs21/understanding-js/blob/main/symbol.js)
 
-- [Iterator](https://github.com/mzs21/understanding-js/blob/main/sync-async/iterator.js)
+- [Iterator](https://github.com/mzs21/understanding-js/blob/main/iterator.js)
 
-- [Generator](https://github.com/mzs21/understanding-js/blob/main/sync-async/generator.js)
+- [Generator](https://github.com/mzs21/understanding-js/blob/main/generator.js)
 
-- [Currying](https://github.com/mzs21/understanding-js/blob/main/sync-async/currying.js)
+- [Currying](https://github.com/mzs21/understanding-js/blob/main/currying.js)
 
 - [Debounce](https://github.com/mzs21/understanding-js/tree/main/debounce)
 
