@@ -47,3 +47,5 @@
 - [Iterator](https://github.com/mzs21/understanding-js/blob/main/sync-async/iterator.js)
 
 - [Generator](https://github.com/mzs21/understanding-js/blob/main/sync-async/generator.js)
+
+- [Currying](https://github.com/mzs21/understanding-js/blob/main/sync-async/currying.js)
