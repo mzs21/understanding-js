@@ -55,3 +55,6 @@
   - [Debounce (HTML)](https://github.com/mzs21/understanding-js/blob/main/debounce/debounce.html)
 
   - [Debounce (JS)](https://github.com/mzs21/understanding-js/blob/main/debounce/debounce.js)
+
+
+- [Memoization](https://github.com/mzs21/understanding-js/blob/main/memoization.js)
