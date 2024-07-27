@@ -58,3 +58,6 @@
 
 
 - [Memoization](https://github.com/mzs21/understanding-js/blob/main/memoization.js)
+
+
+- [NaN](https://github.com/mzs21/understanding-js/blob/main/nan.js)
