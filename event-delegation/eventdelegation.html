@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Delegation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="eventdelegation.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>What's event Delegation?</h1>
+
+      <p>
+        Event delegation involves using
+        <span class="highlight">a single event listener</span> for multiple
+        elements. This listener will still work even if
+        <span class="highlight">new elements</span> are added.
+      </p>
+
+      <div class="languages">
+        <ul id="list">
+          <li>JavaScript</li>
+          <li>PHP</li>
+          <li>Java</li>
+          <li>Python</li>
+          <li>TypeScript</li>
+        </ul>
+
+        <div>
+          <button onclick="addElement()">Add New Element</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="eventdelegation.js"></script>
+  </body>
+</html>
