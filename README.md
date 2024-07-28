@@ -56,8 +56,14 @@
 
   - [Debounce (JS)](https://github.com/mzs21/understanding-js/blob/main/debounce/debounce.js)
 
-
 - [Memoization](https://github.com/mzs21/understanding-js/blob/main/memoization.js)
+
+
+- [Event Delegation](https://github.com/mzs21/understanding-js/tree/main/event-delegation)
+
+  - [Event Delegation (HTML)](https://github.com/mzs21/understanding-js/blob/main/event-delegation/eventdelegation.html)
+
+  - [Event Delegation (JS)](https://github.com/mzs21/understanding-js/blob/main/event-delegation/eventdelegation.js)
 
 
 - [NaN](https://github.com/mzs21/understanding-js/blob/main/nan.js)
