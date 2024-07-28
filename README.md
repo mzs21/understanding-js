@@ -58,12 +58,16 @@
 
 - [Memoization](https://github.com/mzs21/understanding-js/blob/main/memoization.js)
 
-
 - [Event Delegation](https://github.com/mzs21/understanding-js/tree/main/event-delegation)
 
   - [Event Delegation (HTML)](https://github.com/mzs21/understanding-js/blob/main/event-delegation/eventdelegation.html)
 
   - [Event Delegation (JS)](https://github.com/mzs21/understanding-js/blob/main/event-delegation/eventdelegation.js)
 
+- [Event Propagation](https://github.com/mzs21/understanding-js/tree/main/event-propagation)
+
+  - [Event Propagation (HTML)](https://github.com/mzs21/understanding-js/blob/main/event-propagation/eventpropagation.html)
+
+  - [Event Propagation (JS)](https://github.com/mzs21/understanding-js/blob/main/event-propagation/eventpropagation.js)
 
 - [NaN](https://github.com/mzs21/understanding-js/blob/main/nan.js)
