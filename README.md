@@ -77,3 +77,5 @@
   - [Arrow-Function (HTML)](https://github.com/mzs21/understanding-js/blob/main/arrow-function/af.html)
 
   - [Arrow-Function (JS)](https://github.com/mzs21/understanding-js/blob/main/arrow-function/af.js)
+
+[Truthy Falsy Value](https://github.com/mzs21/understanding-js/blob/main/tfv.js)
