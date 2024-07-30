@@ -37,7 +37,7 @@ let js = {
 
         // console.log(this); // 'js' object
 
-        let self = this      // In the past, the reference to this was stored in a variable like this, then used.
+        let self = this      // The reference to this can be stored in a variable like 'self, then used.
 
         this.libraries.forEach(function (a) {
 
@@ -72,7 +72,7 @@ js.printLibraries()
 
 // * MARK: EX 3
 
-// To convert the function() to arrow function of printLibraries, we can do the following - 
+// To convert the function() to arrow function of printLibraries, we can do the following -
 
 /*
 let js = {
@@ -85,7 +85,7 @@ let js = {
 }
 */
 
-
+/*
 let js = {
     name: 'JavaScript',
     libraries: ['React', 'Vue'],
@@ -93,5 +93,112 @@ let js = {
 }
 
 js.printLibraries()
+*/
 
 // Here doesn't have 'this' in this context, so a direct reference was made.
+
+
+// * MARK: EX 4
+
+// Arrow function with event listener
+
+// const searchInput = document.querySelector('.search')
+
+// const result = document.querySelector('.result')
+
+// const thanks = document.querySelector('.thanks')
+
+
+/* Normal function */
+
+/*
+function show() {
+
+    // console.log(this) // Input Element
+
+    result.innerHTML = this.value;
+
+    setTimeout(function () {
+
+        // console.log(this) // Referring to window
+        // setTimeout is a built in function, that is why this.value is giving the output of 'undefined'
+
+        thanks.innerHTML = `You have typed ${this.value}`
+    }, 1000);
+}
+*/
+
+// To solve this, we can store the value of 'this' in a variable, then later use it, like the code below.
+
+/*
+function show() {
+
+    // console.log(this) // Input Element
+
+    result.innerHTML = this.value;
+
+    let self = this;
+
+    setTimeout(function () {
+        thanks.innerHTML = `You have typed ${self.value}`
+    }, 1000);
+}
+*/
+
+// or we can use an arrow function inside the setTimeout
+
+/*
+function show() {
+
+    // console.log(this) // Input Element
+
+    result.innerHTML = this.value;
+
+    setTimeout(() => {
+        thanks.innerHTML = `You have typed ${this.value}`
+    }, 1000);
+}
+*/
+
+/*
+const show = () => {
+
+    // console.log(this) // Window
+
+    // Here, 'this' refer to 'Window', that's why, this.value is undefined
+
+    result.innerHTML = this.value;
+
+    setTimeout(() => {
+        thanks.innerHTML = `You have typed ${this.value}`
+    }, 1000);
+}
+*/
+
+// Normal function is a good way, to solve this issue
+
+// searchInput.addEventListener('keyup', show)
+
+
+// * MARK: EX 5
+/*
+function Person(name) {
+    this.name = name;
+}
+*/
+
+// In JS, the functions are constructor functions, so we can write them using 'new' keyword
+
+// But arrow functions are not constructor functions. So, we can't write them using 'new' keyword
+
+/*
+const Person = (name) => {
+    this.name = name;
+}
+
+let x = new Person('X') // TypeError: Person is not a constructor
+
+console.log(x);
+
+console.log(x.name);
+*/
