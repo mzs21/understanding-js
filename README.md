@@ -71,3 +71,9 @@
   - [Event Propagation (JS)](https://github.com/mzs21/understanding-js/blob/main/event-propagation/eventpropagation.js)
 
 - [NaN](https://github.com/mzs21/understanding-js/blob/main/nan.js)
+
+- [Arrow-Function](https://github.com/mzs21/understanding-js/tree/main/arrow-function)
+
+  - [Arrow-Function (HTML)](https://github.com/mzs21/understanding-js/blob/main/arrow-function/af.html)
+
+  - [Arrow-Function (JS)](https://github.com/mzs21/understanding-js/blob/main/arrow-function/af.js)
