@@ -49,7 +49,7 @@ for (const value of mySet2) {
 
 // * MARK: EX 3
 
-// Converting set to array 
+// Converting set to array
 /*
 let arr = [1, 2, 4, 5, 1];
 
@@ -81,7 +81,7 @@ console.log(mySet);
 */
 
 // * MARK: EX 5
-
+/*
 let arr = [1, 2, 4, 5, 1];
 
 let mySet = new Set(arr);
@@ -99,3 +99,120 @@ mySet.add(obj)
 mySet.add(obj)
 
 console.log(mySet);
+*/
+
+
+// * MARK: EX 6
+/*
+let arr = [1, 2, 4, 5, 5, 3, 4, 1];
+
+console.log([...new Set(arr)]);
+*/
+
+
+// * MARK: EX 7
+/*
+let a = new Set([1, 2, 3])
+
+let b = new Set([3, 4, 5])
+
+// let unionSet = a.union(b) // It's not working on VSCode but working on browser
+
+let unionSet2 = new Set([...a, ...b])
+
+console.log(unionSet);
+
+console.log(unionSet2);
+*/
+
+
+// * MARK: EX 8
+/*
+let a = new Set([1, 2, 3])
+
+let b = new Set([3, 4, 5])
+
+// let intersectionSet = a.intersection(b) // It's not working on VSCode but working on browser
+
+let intersectionSet2 = new Set([...a].filter(x => b.has(x)))
+
+// console.log(intersectionSet);
+
+console.log(intersectionSet2);
+*/
+
+
+// * MARK: EX 9
+/*
+let a = new Set([1, 2, 3])
+
+let b = new Set([3, 4, 5])
+
+let differenceSet = a.difference(b) // It's not working on VSCode but working on browser
+
+let differenceSet2 = new Set([...a].filter(x => !b.has(x)))
+
+console.log(differenceSet);
+
+console.log(differenceSet2);
+*/
+
+
+// WeakSet
+
+// * MARK: EX 10
+/*
+let ws = new WeakSet()
+
+ws.add({ x: 7 });
+
+console.log(ws); // You will find the set empty, becuase, WeakSet does not collect garbage
+
+let obj = { y: 8 }
+
+ws.add(obj)
+
+console.log(ws);
+*/
+
+// WeakSet doesn't have Symbol.iterator in its prototype. So, it is not iterable
+
+
+// * MARK: EX 11
+
+let ws = new WeakSet()
+
+/*
+class Something{
+    constructor(){
+
+    }
+    
+    func(){
+        return 'Returned'
+    }
+}
+
+console.log(Something.prototype.func()); // We can acess a property of a class like this, but we can prevent this by using WeakSet.
+*/
+
+class Something {
+    constructor() {
+        ws.add(this) // This will ensure an object is intantiated
+    }
+
+    func() {
+        if (!ws.has(this)) {
+            throw new Error("Mehtod can't be accessed")
+        }
+        else {
+            return 'Accessed'
+        }
+    }
+}
+
+let a = new Something()
+
+// console.log(Something.prototype.func()); // This will now throw an error
+
+console.log(a.func()); // This won't
