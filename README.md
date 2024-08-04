@@ -78,4 +78,6 @@
 
   - [Arrow-Function (JS)](https://github.com/mzs21/understanding-js/blob/main/arrow-function/af.js)
 
+[Set and WeakSet](https://github.com/mzs21/understanding-js/blob/main/set.js)
+
 [Truthy Falsy Value](https://github.com/mzs21/understanding-js/blob/main/tfv.js)
